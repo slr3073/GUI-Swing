@@ -2,7 +2,7 @@ package avanceRecule;
 
 import javax.swing.Timer;
 
-public class avanceRec extends javax.swing.JFrame {
+public class AvanceRec extends javax.swing.JFrame {
 
     private Timer timerMinus = new Timer(1000,(ae) -> {
         timerMinusActionPerformed(ae);
@@ -12,7 +12,7 @@ public class avanceRec extends javax.swing.JFrame {
         timerPlusActionPerformed(ae);
     });
     
-    public avanceRec() {
+    public AvanceRec() {
         initComponents();
     }
 
@@ -332,14 +332,30 @@ public class avanceRec extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(avanceRec.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AvanceRec.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(avanceRec.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AvanceRec.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(avanceRec.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AvanceRec.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(avanceRec.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AvanceRec.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -360,7 +376,7 @@ public class avanceRec extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new avanceRec().setVisible(true);
+                new AvanceRec().setVisible(true);
             }
         });
     }

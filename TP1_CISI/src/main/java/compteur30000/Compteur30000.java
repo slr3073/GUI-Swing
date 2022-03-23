@@ -1,4 +1,4 @@
-package Compteur30000;
+package compteur30000;
 
 import javax.swing.Timer;
 
