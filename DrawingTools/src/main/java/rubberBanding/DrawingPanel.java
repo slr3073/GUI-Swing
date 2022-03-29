@@ -3,7 +3,6 @@ package rubberBanding;
 import components.Line;
 import java.awt.Color;
 import java.awt.Graphics;
-import java.awt.Point;
 import java.util.ArrayList;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
@@ -68,7 +67,6 @@ public class DrawingPanel extends JPanel {
     private void traceFinal(){
         lines.add(tempLine);
         tempLine = null;
-        clickedPoint = null;
         repaint();
     }
     
@@ -78,8 +76,7 @@ public class DrawingPanel extends JPanel {
                 case INIT:
                     state = State.E1;
                     activateE1();
-                    clickedPoint = evt.getPoint();
-                    changeTempLine(new Line(clickedPoint, evt.getPoint()));
+                    changeTempLine(new Line(evt.getPoint(), evt.getPoint()));
                     break;
                 case E1:
                     //interdit
@@ -112,19 +109,18 @@ public class DrawingPanel extends JPanel {
             case E1:
                 state = State.E1;
                 activateE1();
-                changeTempLine(new Line(clickedPoint, evt.getPoint()));
+                changeTempLine(new Line(tempLine.p1, evt.getPoint()));
                 break;
         }
     }//GEN-LAST:event_formMouseDragged
     
-    private Point clickedPoint;
     private Line tempLine;
     private List<Line> lines = new ArrayList<>();
     
     @Override
     public void paintComponent(Graphics g){
         super.paintComponent(g);
-        System.out.println(lines.size());
+
         for (Line line : lines)
             g.drawLine(line.p1.x, line.p1.y, line.p2.x, line.p2.y);
             

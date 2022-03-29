@@ -1,8 +1,8 @@
 package rubberBanding;
 
-public class ApplicationFrame extends javax.swing.JFrame {
+public class RubberBandingFrame extends javax.swing.JFrame {
 
-    public ApplicationFrame() {
+    public RubberBandingFrame() {
         initComponents();
         drawingPanel1.requestFocus();
     }
@@ -43,7 +43,7 @@ public class ApplicationFrame extends javax.swing.JFrame {
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ApplicationFrame().setVisible(true);
+                new RubberBandingFrame().setVisible(true);
             }
         });
     }

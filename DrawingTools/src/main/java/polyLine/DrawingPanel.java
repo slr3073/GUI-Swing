@@ -10,9 +10,9 @@ import javax.swing.JPanel;
 import java.util.List;
 import javax.swing.SwingUtilities;
 
-public class LineTracingPanel extends JPanel {
+public class DrawingPanel extends JPanel {
 
-    public LineTracingPanel() {
+    public DrawingPanel() {
         initComponents();
     }
     

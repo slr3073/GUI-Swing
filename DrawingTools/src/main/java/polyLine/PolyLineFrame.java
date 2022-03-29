@@ -2,9 +2,9 @@ package polyLine;
 
 import javax.swing.JFrame;
 
-public class PolyLine extends JFrame {
+public class PolyLineFrame extends JFrame {
 
-    public PolyLine() {
+    public PolyLineFrame() {
         initComponents();
         lineTracingPanel1.requestFocus();
     }
@@ -13,7 +13,7 @@ public class PolyLine extends JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        lineTracingPanel1 = new polyLine.LineTracingPanel();
+        lineTracingPanel1 = new polyLine.DrawingPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -55,12 +55,12 @@ public class PolyLine extends JFrame {
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new PolyLine().setVisible(true);
+                new PolyLineFrame().setVisible(true);
             }
         });
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private polyLine.LineTracingPanel lineTracingPanel1;
+    private polyLine.DrawingPanel lineTracingPanel1;
     // End of variables declaration//GEN-END:variables
 }
