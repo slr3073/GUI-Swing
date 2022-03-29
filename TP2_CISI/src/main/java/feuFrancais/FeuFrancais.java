@@ -16,9 +16,9 @@ public class FeuFrancais extends javax.swing.JFrame {
         marcheButton = new javax.swing.JButton();
         arretButton = new javax.swing.JButton();
         panneButton = new javax.swing.JButton();
-        redPane = new javax.swing.JPanel();
-        orangePane = new javax.swing.JPanel();
-        greenPane = new javax.swing.JPanel();
+        ampouleRouge = new component.Ampoule(Color.RED);
+        ampouleOrange = new component.Ampoule(Color.ORANGE);
+        ampouleVerte = new component.Ampoule(Color.GREEN);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -48,42 +48,36 @@ public class FeuFrancais extends javax.swing.JFrame {
             }
         });
 
-        redPane.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
-
-        javax.swing.GroupLayout redPaneLayout = new javax.swing.GroupLayout(redPane);
-        redPane.setLayout(redPaneLayout);
-        redPaneLayout.setHorizontalGroup(
-            redPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout ampouleRougeLayout = new javax.swing.GroupLayout(ampouleRouge);
+        ampouleRouge.setLayout(ampouleRougeLayout);
+        ampouleRougeLayout.setHorizontalGroup(
+            ampouleRougeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 100, Short.MAX_VALUE)
         );
-        redPaneLayout.setVerticalGroup(
-            redPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-
-        orangePane.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
-
-        javax.swing.GroupLayout orangePaneLayout = new javax.swing.GroupLayout(orangePane);
-        orangePane.setLayout(orangePaneLayout);
-        orangePaneLayout.setHorizontalGroup(
-            orangePaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-        orangePaneLayout.setVerticalGroup(
-            orangePaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        ampouleRougeLayout.setVerticalGroup(
+            ampouleRougeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 100, Short.MAX_VALUE)
         );
 
-        greenPane.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
-
-        javax.swing.GroupLayout greenPaneLayout = new javax.swing.GroupLayout(greenPane);
-        greenPane.setLayout(greenPaneLayout);
-        greenPaneLayout.setHorizontalGroup(
-            greenPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout ampouleOrangeLayout = new javax.swing.GroupLayout(ampouleOrange);
+        ampouleOrange.setLayout(ampouleOrangeLayout);
+        ampouleOrangeLayout.setHorizontalGroup(
+            ampouleOrangeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 100, Short.MAX_VALUE)
         );
-        greenPaneLayout.setVerticalGroup(
-            greenPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        ampouleOrangeLayout.setVerticalGroup(
+            ampouleOrangeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout ampouleVerteLayout = new javax.swing.GroupLayout(ampouleVerte);
+        ampouleVerte.setLayout(ampouleVerteLayout);
+        ampouleVerteLayout.setHorizontalGroup(
+            ampouleVerteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        ampouleVerteLayout.setVerticalGroup(
+            ampouleVerteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 100, Short.MAX_VALUE)
         );
 
@@ -92,70 +86,52 @@ public class FeuFrancais extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(94, 94, 94)
+                .addGap(113, 113, 113)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(redPane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(ampouleVerte, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 129, Short.MAX_VALUE)
+                        .addComponent(panneButton, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addComponent(ampouleOrange, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(marcheButton, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(orangePane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(greenPane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(140, 140, 140)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(arretButton, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(panneButton, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addComponent(arretButton, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addComponent(ampouleRouge, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(marcheButton, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(47, 47, 47))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(93, 93, 93)
+                .addGap(75, 75, 75)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(redPane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addGap(27, 27, 27)
-                        .addComponent(marcheButton)))
+                    .addComponent(marcheButton)
+                    .addComponent(ampouleRouge, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(orangePane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(32, 32, 32)
-                        .addComponent(arretButton)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(greenPane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(27, 27, 27)
-                        .addComponent(panneButton)))
-                .addContainerGap(79, Short.MAX_VALUE))
+                    .addComponent(ampouleOrange, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(arretButton, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(ampouleVerte, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(panneButton))
+                .addContainerGap(97, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private Timer timerRougeOk = new Timer(2000,(ae) -> {
-        timerRougeOkTicked(ae);
-    });
+    private Timer timerRougeOk = new Timer(2000, this::timerRougeOkTicked);
     
-    private Timer timerVertOk = new Timer(3000,(ae) -> {
-        timerVertOkTicked(ae);
-    });
+    private Timer timerVertOk = new Timer(3000, this::timerVertOkTicked);
     
-    private Timer timerOrangeOk = new Timer(1500,(ae) -> {
-        timerOrangeOkTicked(ae);
-    });
+    private Timer timerOrangeOk = new Timer(1500, this::timerOrangeOkTicked);
     
-    private Timer timerOrangePanne = new Timer(1000,(ae) -> {
-        timerOrangePanneTicked(ae);
-    });
+    private Timer timerOrangePanne = new Timer(1000, this::timerOrangePanneTicked);
     
-    private Timer timerOffPanne = new Timer(500,(ae) -> {
-        timerOffPanneTicked(ae);
-    });
+    private Timer timerOffPanne = new Timer(500, this::timerOffPanneTicked);
     
     //States
     private enum State {
@@ -238,27 +214,27 @@ public class FeuFrancais extends javax.swing.JFrame {
     
     //Actions
     private void lightOff(){
-        redPane.setBackground(new Color(242,242,242));
-        greenPane.setBackground(new Color(242,242,242));
-        orangePane.setBackground(new Color(242,242,242));
+        ampouleRouge.eteindre();
+        ampouleOrange.eteindre();
+        ampouleVerte.eteindre();
     }
     
     private void lightRed(){
-        redPane.setBackground(new Color(255,51,51));
-        greenPane.setBackground(new Color(242,242,242));
-        orangePane.setBackground(new Color(242,242,242));
+        ampouleRouge.allumer();
+        ampouleOrange.eteindre();
+        ampouleVerte.eteindre();
     }
     
     private void lightOrange(){
-        redPane.setBackground(new Color(242,242,242));
-        greenPane.setBackground(new Color(242,242,242));
-        orangePane.setBackground(new Color(255,153,0));
+        ampouleRouge.eteindre();
+        ampouleOrange.allumer();
+        ampouleVerte.eteindre();
     }
     
     private void lightGreen(){
-        redPane.setBackground(new Color(242,242,242));
-        greenPane.setBackground(new Color(102,204,0));
-        orangePane.setBackground(new Color(242,242,242));
+        ampouleRouge.eteindre();
+        ampouleOrange.eteindre();
+        ampouleVerte.allumer();
     }
     
     
@@ -488,11 +464,11 @@ public class FeuFrancais extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private component.Ampoule ampouleOrange;
+    private component.Ampoule ampouleRouge;
+    private component.Ampoule ampouleVerte;
     private javax.swing.JButton arretButton;
-    private javax.swing.JPanel greenPane;
     private javax.swing.JButton marcheButton;
-    private javax.swing.JPanel orangePane;
     private javax.swing.JButton panneButton;
-    private javax.swing.JPanel redPane;
     // End of variables declaration//GEN-END:variables
 }

@@ -30,35 +30,30 @@ public class LineTracingPanel extends JPanel {
     private void activateDrawing(){}
     
     // Actions
-    
     public void addPoint(Point p){
-        this.points.add(p);
-        this.repaint();
+        points.add(p);
+        repaint();
     }
     
     public void removeLastPoint(){
         if(points.isEmpty()) return;
         
         points.remove(points.size() - 1);
-        this.repaint();
+        repaint();
     }
     
     public void changePointTemp(Point p){
         pointTemp = p;
-        this.repaint();
+        repaint();
     }
     
     public void clearPoints(){
-        System.out.println(points);
         points.clear();
-        this.repaint();
+        repaint();
     }
-    
-    
-    
-    
+     
     private Point pointTemp = new Point(0, 0);
-    private List<Point> points= new ArrayList<>();
+    private List<Point> points = new ArrayList<>();
     
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -75,8 +70,8 @@ public class LineTracingPanel extends JPanel {
             }
         });
         addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                formKeyPressed(evt);
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                formKeyTyped(evt);
             }
         });
 
@@ -136,26 +131,6 @@ public class LineTracingPanel extends JPanel {
         }
     }
     
-    public void spacePressed(KeyEvent evt){
-        switch(state){
-                case INIT:
-                    state = State.INIT;
-                    activateInit();
-                    this.repaint();
-                    break;
-                case DRAWING:
-                    state = State.INIT;
-                    activateInit();
-                    pointTemp = points.get(points.size() - 1);
-                    this.repaint();
-                    break;
-            }
-    }
-    
-    private void formKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_formKeyPressed
-
-    }//GEN-LAST:event_formKeyPressed
-
     private void formMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseMoved
         switch(state){
             case INIT:
@@ -167,18 +142,32 @@ public class LineTracingPanel extends JPanel {
                 changePointTemp(evt.getPoint());
                 state = State.DRAWING;
                 activateDrawing();
-                
                 break;
         }
     }//GEN-LAST:event_formMouseMoved
+
+    private void formKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_formKeyTyped
+        if(" ".equals(" ")){
+            switch(state){
+                case INIT:
+                    state = State.INIT;
+                    activateInit();
+                    break;
+                case DRAWING:
+                    state = State.INIT;
+                    activateInit();
+                    pointTemp = points.get(points.size() - 1);
+                    repaint();
+                    break;
+            }
+        }
+    }//GEN-LAST:event_formKeyTyped
     
     @Override
-    public void paint(Graphics g){  
-        g.setColor(new Color(242,242,242));
-        g.fillRect(0, 0, this.getWidth(), this.getHeight());
+    public void paintComponent(Graphics g){  
+        super.paintComponent(g);
         
-        Color color = state == State.INIT ? Color.RED : Color.BLACK;
-        g.setColor(color);
+        g.setColor(state == State.INIT ? Color.RED : Color.BLACK);
         
         if(points.size() > 1){
             for (int i = 0; i < points.size() - 1; i++) {
@@ -186,12 +175,10 @@ public class LineTracingPanel extends JPanel {
                 Point p2 = points.get(i + 1);
                 g.drawLine(p1.x, p1.y, p2.x, p2.y);
             }
-            
-            
         }
+        
         if(points.size() >= 1 && state != State.INIT){
-            System.out.println(state);
-            g.setColor(Color.BLUE);
+            g.setColor(Color.GREEN);
             Point lastPoint = points.get(points.size() - 1);
             g.drawLine(lastPoint.x, lastPoint.y, pointTemp.x, pointTemp.y);
         }

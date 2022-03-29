@@ -6,6 +6,7 @@ public class PolyLine extends JFrame {
 
     public PolyLine() {
         initComponents();
+        lineTracingPanel1.requestFocus();
     }
 
     @SuppressWarnings("unchecked")
@@ -15,9 +16,10 @@ public class PolyLine extends JFrame {
         lineTracingPanel1 = new polyLine.LineTracingPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        addKeyListener(new java.awt.event.KeyAdapter() {
+
+        lineTracingPanel1.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                formKeyTyped(evt);
+                lineTracingPanel1KeyTyped(evt);
             }
         });
 
@@ -46,9 +48,9 @@ public class PolyLine extends JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void formKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_formKeyTyped
-        lineTracingPanel1.spacePressed(evt);
-    }//GEN-LAST:event_formKeyTyped
+    private void lineTracingPanel1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_lineTracingPanel1KeyTyped
+
+    }//GEN-LAST:event_lineTracingPanel1KeyTyped
 
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -57,6 +59,7 @@ public class PolyLine extends JFrame {
             }
         });
     }
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private polyLine.LineTracingPanel lineTracingPanel1;
     // End of variables declaration//GEN-END:variables
