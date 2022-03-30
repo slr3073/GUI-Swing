@@ -122,13 +122,10 @@ public class DrawingPanel extends JPanel {
         super.paintComponent(g);
 
         for (Line line : lines)
-            g.drawLine(line.p1.x, line.p1.y, line.p2.x, line.p2.y);
+            line.draw(g, Color.BLACK);
             
-
-        if(tempLine != null){
-            g.setColor(Color.RED);
-            g.drawLine(tempLine.p1.x, tempLine.p1.y, tempLine.p2.x, tempLine.p2.y);
-        }
+        if(tempLine != null)
+            tempLine.draw(g, Color.RED);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
