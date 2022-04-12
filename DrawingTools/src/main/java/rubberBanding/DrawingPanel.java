@@ -79,7 +79,7 @@ public class DrawingPanel extends JPanel {
                     changeTempLine(new Line(evt.getPoint(), evt.getPoint()));
                     break;
                 case E1:
-                    //interdit
+                    //impossible
                     break;
             }
         }
@@ -89,7 +89,7 @@ public class DrawingPanel extends JPanel {
         if(SwingUtilities.isLeftMouseButton(evt)){
             switch(state){
                 case INIT:
-                    //interdit
+                    //impossible
                     break;
                 case E1:
                     state = State.INIT;

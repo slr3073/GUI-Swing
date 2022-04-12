@@ -4,6 +4,7 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Point;
 import java.awt.event.MouseEvent;
+import java.awt.geom.Line2D;
 import java.util.ArrayList;
 import javax.swing.JPanel;
 import java.util.List;
@@ -167,7 +168,6 @@ public class DrawingPanel extends JPanel {
         super.paintComponent(g);
         
         g.setColor(state == State.INIT ? Color.RED : Color.BLACK);
-        
         if(points.size() > 1){
             for (int i = 0; i < points.size() - 1; i++) {
                 Point p1 = points.get(i);
